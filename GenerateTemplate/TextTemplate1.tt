@@ -5,23 +5,7 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.IO" #>
 <#@ output extension=".txt" #>
 
 
-<#
-const string connection = "server=localhost;database=Northwind;Trusted_Connection=True";
-SqlConnection con = new SqlConnection(connection);                                                                                       
-SqlCommand cmd = new SqlCommand("select table_name from INFORMATION_SCHEMA.TABLES ", con);
-if (con.State == System.Data.ConnectionState.Closed)
-    con.Open();
-
-List<object> tableNames = new List<object>();
-SqlDataReader dr = cmd.ExecuteReader();
-while (dr.Read())
-{
-    tableNames.Add(dr[0]);
-}
-
-dr.Close();
-con.Close();
-#>
