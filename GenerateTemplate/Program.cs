@@ -11,9 +11,6 @@ namespace GenerateTemplate
         {
             const string connection = "server=localhost;database=Northwind;Trusted_Connection=True";
             SqlConnection con = new SqlConnection(connection);                                                                                       
-        
-
-
             SqlCommand cmd = new SqlCommand("select table_name from INFORMATION_SCHEMA.TABLES ", con);
             if (con.State == System.Data.ConnectionState.Closed)
                 con.Open();
@@ -23,7 +20,6 @@ namespace GenerateTemplate
             while (dr.Read())
             {
                 tableNames.Add(dr[0]);
-
             }
 
             dr.Close();
@@ -44,22 +40,35 @@ namespace GenerateTemplate
             foreach (var item in tableNames)
             {
 
-               string path = System.IO.Path.Combine(pathString, $"{item}.cs");
-
+                string path = System.IO.Path.Combine(pathString, $"{item}.cs");
                 Console.WriteLine("Path to my file: {0}\n", path);
                 if (!System.IO.File.Exists(path))
                 {
                     System.IO.File.Create(path);
                     path = @"C:\Users\narmin.psh\source\repos\GenerateTemplate\GenerateTemplate\NewFolder\myDir1";
+
                 }
                 else
                 {
                     Console.WriteLine("File \"{0}\" already exists.", item);
                 }
-
             }
 
-
+            List<object> columnNames = new List<object>();
+            if (con.State == System.Data.ConnectionState.Closed)
+                con.Open();
+            foreach (var name in tableNames)
+            {
+               SqlCommand cmd1 = new SqlCommand($"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME LIKE \'{name}\'", con);
+               SqlDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+                    columnNames.Add(dr1[0]);    
+                    Console.WriteLine(dr1[0]);
+                }
+                dr1.Close();
+                con.Close();
+            }
         }
     }
 }

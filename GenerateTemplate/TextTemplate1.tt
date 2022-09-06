@@ -1,15 +1,27 @@
 ﻿<#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ output extension=".cs" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ output extension=".txt" #>
 
 
+<#
+const string connection = "server=localhost;database=Northwind;Trusted_Connection=True";
+SqlConnection con = new SqlConnection(connection);                                                                                       
+SqlCommand cmd = new SqlCommand("select table_name from INFORMATION_SCHEMA.TABLES ", con);
+if (con.State == System.Data.ConnectionState.Closed)
+    con.Open();
 
-<#int top = 10;
+List<object> tableNames = new List<object>();
+SqlDataReader dr = cmd.ExecuteReader();
+while (dr.Read())
+{
+    tableNames.Add(dr[0]);
+}
 
-for (int i = 0; i<=top; i++)
-{ #>
-   The square of <#= i #> is <#= i*i #>
-<# } #>
+dr.Close();
+con.Close();
+#>
