@@ -1,4 +1,4 @@
-public class Order Details 
+public class OrderDetails 
 {
 
 public int OrderID; 
