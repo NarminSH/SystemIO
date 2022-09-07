@@ -39,10 +39,6 @@ namespace GenerateTemplate
                     {
                         type = "int";
                     }
-                    else if (dr[1].ToString() == "bool")
-                    {
-                        type = "bool";
-                    }
                     else
                     { type = "string"; }
                             

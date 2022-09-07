@@ -1,9 +1,9 @@
 public class Region 
 {
 
-public int RegionID; 
+public int RegionID {get; set;} 
 
-public  RegionDescription; 
+public string RegionDescription {get; set;} 
 
 
 }

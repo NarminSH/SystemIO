@@ -1,41 +1,41 @@
 public class Employees 
 {
 
-public int EmployeeID; 
+public int EmployeeID {get; set;} 
 
-public string LastName; 
+public string LastName {get; set;} 
 
-public string FirstName; 
+public string FirstName {get; set;} 
 
-public string Title; 
+public string Title {get; set;} 
 
-public string TitleOfCourtesy; 
+public string TitleOfCourtesy {get; set;} 
 
-public  BirthDate; 
+public string BirthDate {get; set;} 
 
-public  HireDate; 
+public string HireDate {get; set;} 
 
-public string Address; 
+public string Address {get; set;} 
 
-public string City; 
+public string City {get; set;} 
 
-public string Region; 
+public string Region {get; set;} 
 
-public string PostalCode; 
+public string PostalCode {get; set;} 
 
-public string Country; 
+public string Country {get; set;} 
 
-public string HomePhone; 
+public string HomePhone {get; set;} 
 
-public string Extension; 
+public string Extension {get; set;} 
 
-public  Photo; 
+public string Photo {get; set;} 
 
-public  Notes; 
+public string Notes {get; set;} 
 
-public int ReportsTo; 
+public int ReportsTo {get; set;} 
 
-public string PhotoPath; 
+public string PhotoPath {get; set;} 
 
 
 }

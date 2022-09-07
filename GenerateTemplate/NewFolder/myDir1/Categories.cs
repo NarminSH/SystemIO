@@ -1,13 +1,13 @@
 public class Categories 
 {
 
-public int CategoryID; 
+public int CategoryID {get; set;} 
 
-public string CategoryName; 
+public string CategoryName {get; set;} 
 
-public  Description; 
+public string Description {get; set;} 
 
-public  Picture; 
+public string Picture {get; set;} 
 
 
 }

@@ -1,9 +1,9 @@
 public class CustomerDemographics 
 {
 
-public  CustomerTypeID; 
+public string CustomerTypeID {get; set;} 
 
-public  CustomerDesc; 
+public string CustomerDesc {get; set;} 
 
 
 }

@@ -1,11 +1,11 @@
 public class Shippers 
 {
 
-public int ShipperID; 
+public int ShipperID {get; set;} 
 
-public string CompanyName; 
+public string CompanyName {get; set;} 
 
-public string Phone; 
+public string Phone {get; set;} 
 
 
 }

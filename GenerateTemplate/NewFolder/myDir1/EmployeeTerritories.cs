@@ -1,9 +1,9 @@
 public class EmployeeTerritories 
 {
 
-public int EmployeeID; 
+public int EmployeeID {get; set;} 
 
-public string TerritoryID; 
+public string TerritoryID {get; set;} 
 
 
 }

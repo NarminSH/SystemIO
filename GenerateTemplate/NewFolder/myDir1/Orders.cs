@@ -1,33 +1,33 @@
 public class Orders 
 {
 
-public int OrderID; 
+public int OrderID {get; set;} 
 
-public  CustomerID; 
+public string CustomerID {get; set;} 
 
-public int EmployeeID; 
+public int EmployeeID {get; set;} 
 
-public  OrderDate; 
+public string OrderDate {get; set;} 
 
-public  RequiredDate; 
+public string RequiredDate {get; set;} 
 
-public  ShippedDate; 
+public string ShippedDate {get; set;} 
 
-public int ShipVia; 
+public int ShipVia {get; set;} 
 
-public int Freight; 
+public int Freight {get; set;} 
 
-public string ShipName; 
+public string ShipName {get; set;} 
 
-public string ShipAddress; 
+public string ShipAddress {get; set;} 
 
-public string ShipCity; 
+public string ShipCity {get; set;} 
 
-public string ShipRegion; 
+public string ShipRegion {get; set;} 
 
-public string ShipPostalCode; 
+public string ShipPostalCode {get; set;} 
 
-public string ShipCountry; 
+public string ShipCountry {get; set;} 
 
 
 }

@@ -1,25 +1,25 @@
 public class Products 
 {
 
-public int ProductID; 
+public int ProductID {get; set;} 
 
-public string ProductName; 
+public string ProductName {get; set;} 
 
-public int SupplierID; 
+public int SupplierID {get; set;} 
 
-public int CategoryID; 
+public int CategoryID {get; set;} 
 
-public string QuantityPerUnit; 
+public string QuantityPerUnit {get; set;} 
 
-public int UnitPrice; 
+public int UnitPrice {get; set;} 
 
-public int UnitsInStock; 
+public int UnitsInStock {get; set;} 
 
-public int UnitsOnOrder; 
+public int UnitsOnOrder {get; set;} 
 
-public int ReorderLevel; 
+public int ReorderLevel {get; set;} 
 
-public int Discontinued; 
+public int Discontinued {get; set;} 
 
 
 }

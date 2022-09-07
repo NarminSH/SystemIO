@@ -1,11 +1,11 @@
 public class Territories 
 {
 
-public string TerritoryID; 
+public string TerritoryID {get; set;} 
 
-public  TerritoryDescription; 
+public string TerritoryDescription {get; set;} 
 
-public int RegionID; 
+public int RegionID {get; set;} 
 
 
 }
